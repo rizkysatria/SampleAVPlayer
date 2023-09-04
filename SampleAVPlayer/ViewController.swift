@@ -8,6 +8,7 @@
 import UIKit
 import AVFoundation
 import MultipeerConnectivity
+import AVKit
 
 class ViewController: UIViewController {
     
@@ -18,16 +19,36 @@ class ViewController: UIViewController {
     var browser: MCNearbyServiceBrowser?
     private var playerView: PlayerView?
     private let videoURL = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-
+    
+    
+    private var player: AVPlayer?
+    private var playerViewController: AVPlayerViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        setupView()
-        playVideo()
         
-        browser = MCNearbyServiceBrowser(peer: MCPeerID(displayName: UIDevice.current.name), serviceType: "airPlay")
-        browser?.delegate = self
+        // Create an AVPlayer with the video URL
+        guard let url = URL(string: videoURL) else { return }
+        let player = AVPlayer(url: url)
+        
+        // Create an AVPlayerViewController
+        playerViewController = AVPlayerViewController()
+        playerViewController?.player = player
+        
+        // Allow AirPlay
+        player.allowsExternalPlayback = true
+        playerViewController?.showsPlaybackControls = true
+        
+        // Present the AVPlayerViewController
+        if let playerViewController = playerViewController {
+            addChild(playerViewController)
+            view.addSubview(playerViewController.view)
+            playerViewController.view.frame = view.bounds
+            playerViewController.didMove(toParent: self)
+            
+            // Start playing the video
+            player.play()
+        }
     }
 
     private func setupView() {
