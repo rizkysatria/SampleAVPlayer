@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GM4-iW-qVa">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="8aL-4T-YyD">
+            <objects>
+                <navigationController id="GM4-iW-qVa" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="L5b-Ne-YHD">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HGd-nL-mtU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="86U-iN-1yE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1277" y="-133"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SampleAVPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1VE-yX-isN">
+                                <rect key="frame" x="0.0" y="103" width="393" height="210"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="ADP-tq-W0D"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VaR-H5-jfX">
+                                <rect key="frame" x="166.66666666666666" y="338" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="a4X-kS-E0M"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="onTapPlayBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HP1-gL-dOE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mO5-1f-bAk">
+                                <rect key="frame" x="152.66666666666666" y="393" width="88" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="V6O-RN-0k3"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="88" id="cX7-Wy-RPe"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="onTapPauseBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LFw-Bv-p6h"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VaR-H5-jfX" firstAttribute="top" secondItem="1VE-yX-isN" secondAttribute="bottom" constant="25" id="CQG-8Z-0bl"/>
+                            <constraint firstItem="VaR-H5-jfX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KTQ-Do-59r"/>
+                            <constraint firstItem="1VE-yX-isN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Rj8-t4-kNw"/>
+                            <constraint firstItem="mO5-1f-bAk" firstAttribute="centerX" secondItem="VaR-H5-jfX" secondAttribute="centerX" id="TtL-FG-Kqc"/>
+                            <constraint firstItem="1VE-yX-isN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fRe-QF-Agr"/>
+                            <constraint firstItem="1VE-yX-isN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="k76-XU-zFD"/>
+                            <constraint firstItem="mO5-1f-bAk" firstAttribute="top" secondItem="VaR-H5-jfX" secondAttribute="bottom" constant="25" id="kq6-gY-X3v"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="puX-KH-xdd"/>
+                    <connections>
+                        <outlet property="containerView" destination="1VE-yX-isN" id="Yx2-2r-IaT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-535.1145038167939" y="-133.09859154929578"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
