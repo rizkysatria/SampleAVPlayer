@@ -13,6 +13,7 @@
 		B51DA1522AA59456003C36AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B51DA1512AA59456003C36AD /* Assets.xcassets */; };
 		B51DA1552AA59456003C36AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B51DA1532AA59456003C36AD /* LaunchScreen.storyboard */; };
 		B51DA15D2AA59769003C36AD /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51DA15C2AA59769003C36AD /* PlayerView.swift */; };
+		B5FDA88D2AA84D4300731040 /* SimplePieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FDA88C2AA84D4300731040 /* SimplePieChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B51DA1542AA59456003C36AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B51DA1562AA59456003C36AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B51DA15C2AA59769003C36AD /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		B5FDA88C2AA84D4300731040 /* SimplePieChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePieChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		B51DA1472AA59455003C36AD /* SampleAVPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				B5FDA88C2AA84D4300731040 /* SimplePieChartView.swift */,
 				B51DA1482AA59455003C36AD /* AppDelegate.swift */,
 				B51DA15C2AA59769003C36AD /* PlayerView.swift */,
 				B51DA14C2AA59455003C36AD /* ViewController.swift */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5FDA88D2AA84D4300731040 /* SimplePieChartView.swift in Sources */,
 				B51DA15D2AA59769003C36AD /* PlayerView.swift in Sources */,
 				B51DA14D2AA59455003C36AD /* ViewController.swift in Sources */,
 				B51DA1492AA59455003C36AD /* AppDelegate.swift in Sources */,
