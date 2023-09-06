@@ -42,9 +42,11 @@ class ViewController: UIViewController {
         playerView.play(with: url)
     }
     
-    @IBAction func onTapPauseBtn(_ sender: Any) {
+    @IBAction func onTapAirPlayBtn(_ sender: Any) {
         playerView?.showAirplay()
-        browser?.startBrowsingForPeers()
+    }
+    @IBAction func onTapPauseBtn(_ sender: Any) {
+        playerView?.player?.pause()
     }
     @IBAction func onTapPlayBtn(_ sender: Any) {
         playerView?.player?.play()

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GM4-iW-qVa">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -51,7 +52,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mO5-1f-bAk">
-                                <rect key="frame" x="152.66666666666666" y="393" width="88" height="30"/>
+                                <rect key="frame" x="152.66666666666666" y="383" width="88" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="V6O-RN-0k3"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="88" id="cX7-Wy-RPe"/>
@@ -62,17 +63,34 @@
                                     <action selector="onTapPauseBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LFw-Bv-p6h"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scs-BY-7N2">
+                                <rect key="frame" x="152.66666666666666" y="425" width="88" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7ol-gV-Bpa"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="88" id="fks-Ip-oLf"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="AirPlay"/>
+                                <connections>
+                                    <action selector="onTapAirPlayBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9IK-A6-3a9"/>
+                                    <action selector="onTapPauseBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k3I-Ns-Wfn"/>
+                                    <action selector="onTapPlayBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QfL-4b-uhy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Scs-BY-7N2" secondAttribute="trailing" constant="152.33333333333334" id="AfY-4r-mXY"/>
                             <constraint firstItem="VaR-H5-jfX" firstAttribute="top" secondItem="1VE-yX-isN" secondAttribute="bottom" constant="25" id="CQG-8Z-0bl"/>
                             <constraint firstItem="VaR-H5-jfX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KTQ-Do-59r"/>
                             <constraint firstItem="1VE-yX-isN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Rj8-t4-kNw"/>
                             <constraint firstItem="mO5-1f-bAk" firstAttribute="centerX" secondItem="VaR-H5-jfX" secondAttribute="centerX" id="TtL-FG-Kqc"/>
                             <constraint firstItem="1VE-yX-isN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fRe-QF-Agr"/>
+                            <constraint firstItem="Scs-BY-7N2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mO5-1f-bAk" secondAttribute="leading" id="gWo-eN-1bX"/>
                             <constraint firstItem="1VE-yX-isN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="k76-XU-zFD"/>
-                            <constraint firstItem="mO5-1f-bAk" firstAttribute="top" secondItem="VaR-H5-jfX" secondAttribute="bottom" constant="25" id="kq6-gY-X3v"/>
+                            <constraint firstItem="mO5-1f-bAk" firstAttribute="top" secondItem="VaR-H5-jfX" secondAttribute="bottom" constant="15" id="kq6-gY-X3v"/>
+                            <constraint firstItem="Scs-BY-7N2" firstAttribute="top" secondItem="mO5-1f-bAk" secondAttribute="bottom" constant="12" id="nfj-2L-DxG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="puX-KH-xdd"/>
